@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>theme change</title>
+    <style>
+      body {
+        margin: 20px;
+        transition: background-color 0.3s, color 0.3s;
+        text-align: center;
+      }
+      .dark-theme {
+        background-color: black;
+        color: white;
+      }
+      .light-theme {
+        background-color: white;
+        color: black;
+      }
+    </style>
+  </head>
+  <body class="light-theme">
+    <h1>Black&white</h1>
+    <button onclick="toggletheme()">Theme change</button>
+
+    <script>
+      function toggletheme() {
+        const body = document.body;
+        if (body.classList.contains("light-theme")) {
+          body.className = "dark-theme";
+        } else {
+          body.className = "light-theme";
+        }
+      }
+    </script>
+  </body>
+</html>
